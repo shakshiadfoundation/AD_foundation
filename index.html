@@ -102,7 +102,39 @@ padding:20px;
 margin-top:30px;
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+        display:block;
+    }
+
+    .hero img{
+        width:90%;
+        max-width:300px;
+        height:auto;
+        display:block;
+        margin:20px auto;
+    }
+  }
 
 header h1{
 font-size:25px;
@@ -114,7 +146,7 @@ font-size:28px;
 
 .hero p{
 font-size:16px;
-}
+  }
 
 }
 </style>
