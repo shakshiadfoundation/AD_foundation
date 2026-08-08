@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AD Foundation Learning Platform</title>
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f9ff;
-color:#333;
+    background:#f5f9ff;
+    color:#333;
 }
 
-/* ===== HEADER ===== */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:relative;
@@ -42,10 +52,12 @@ header{
     text-align:center;
 }
 
-/* LOGO */
+
+/* =========================
+   LOGO
+========================= */
 
 .site-logo{
-    <img src="Logo.png">
     position:absolute;
 
     top:20px;
@@ -64,11 +76,17 @@ header{
     box-shadow:0 3px 10px rgba(0,0,0,0.25);
 }
 
-/* HEADER TEXT */
+
+/* =========================
+   HEADER TEXT
+========================= */
+
+.header-content{
+    width:100%;
+}
 
 header h1{
     font-size:42px;
-    margin:0;
 }
 
 header p{
@@ -77,237 +95,973 @@ header p{
 }
 
 
-/* ===== MOBILE ===== */
+/* =========================
+   HERO
+========================= */
 
-@media(max-width:600px){
+.hero{
+    padding:50px 20px;
+    text-align:center;
+    background:white;
+}
+
+.hero h2{
+    font-size:35px;
+    color:#0066cc;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:#ff9900;
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-btn{
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:13px 25px;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    padding:50px 20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#0066cc;
+    margin-bottom:30px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.card{
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#00b050;
+    margin-bottom:10px;
+}
+
+
+/* =========================
+   CLASS IMAGES
+========================= */
+
+.card img{
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:15px auto;
+
+    border-radius:10px;
+}
+
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section{
+    padding:55px 20px;
+
+    background:#eef6ff;
+}
+
+.form-section h2{
+    text-align:center;
+
+    color:#0066cc;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.form-description{
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#555;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   FORM BOX
+========================= */
+
+.form-box{
+
+    max-width:650px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.10);
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-weight:bold;
+
+    color:#333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#0066cc;
+
+    box-shadow:
+    0 0 5px rgba(0,102,204,0.2);
+}
+
+.form-group textarea{
+
+    height:120px;
+
+    resize:vertical;
+}
+
+
+/* =========================
+   FORM SUBMIT
+========================= */
+
+.submit-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#25D366;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+
+    background:#1ebe5d;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section{
+
+    padding:50px 20px;
+
+    background:white;
+
+    text-align:center;
+}
+
+.contact-section h2{
+
+    color:#0066cc;
+
+    margin-bottom:20px;
+}
+
+.contact-section p{
+
+    margin:8px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#0066cc;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:30px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:768px){
 
     header{
+
         min-height:225px;
+
         padding:75px 20px 25px;
     }
 
     .site-logo{
+
+        width:60px;
+        height:60px;
+
+        top:12px;
+        left:12px;
+    }
+
+    header h1{
+
+        font-size:30px;
+
+        line-height:1.2;
+    }
+
+    header p{
+
+        font-size:17px;
+    }
+
+    .hero h2{
+
+        font-size:28px;
+    }
+
+    .hero p{
+
+        font-size:16px;
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    header{
+
+        min-height:225px;
+
+        padding:75px 15px 25px;
+    }
+
+    .site-logo{
+
         width:55px;
         height:55px;
 
         top:12px;
         left:12px;
-
-        padding:4px;
     }
 
     header h1{
-        font-size:30px;
-        line-height:1.2;
+
+        font-size:28px;
     }
 
     header p{
-        font-size:17px;
-        line-height:1.4;
+
+        font-size:16px;
     }
+
+    .hero{
+
+        padding:45px 15px;
+    }
+
+    .hero h2{
+
+        font-size:28px;
+    }
+
+    .section{
+
+        padding:45px 15px;
+    }
+
+    .form-section{
+
+        padding:45px 15px;
+    }
+
+    .form-box{
+
+        padding:20px;
+    }
+
 }
 
 
-/* ===== SMALL MOBILE ===== */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media(max-width:400px){
 
     .site-logo{
+
         width:48px;
         height:48px;
+
+        top:10px;
+        left:10px;
     }
 
     header h1{
-        font-size:25px;
-    }
 
-    header p{
-        font-size:15px;
-    }
-    }
-
-.hero{
-padding:50px 20px;
-text-align:center;
-background:white;
-}
-
-.hero h2{
-font-size:35px;
-color:#0066cc;
-}
-
-.hero p{
-margin-top:15px;
-font-size:18px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#ff9900;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-
-.section{
-padding:50px 20px;
-}
-
-.section h2{
-text-align:center;
-color:#0066cc;
-margin-bottom:30px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-color:#00b050;
-margin-bottom:10px;
-}
-
-footer{
-background:#0066cc;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-
-@media (max-width:768px){
-
-    header h1{
         font-size:24px;
     }
 
+    header p{
+
+        font-size:14px;
+    }
+
     .hero h2{
-        font-size:28px;
+
+        font-size:25px;
     }
 
-    .hero p{
-        font-size:16px;
+    .form-section h2{
+
+        font-size:27px;
     }
 
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .card img{
-        width:100%;
-        height:220px;
-        object-fit:cover;
-        display:block;
-    }
-
-    .hero img{
-        width:90%;
-        max-width:300px;
-        height:auto;
-        display:block;
-        margin:20px auto;
-    }
-  }
-
-header h1{
-font-size:25px;
 }
 
-.hero h2{
-font-size:28px;
-}
-
-.hero p{
-font-size:16px;
-  }
-
-}
 </style>
 
 </head>
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-<h1>AD Foundation Learning Platform</h1>
-<p>Welcome to AD Foundation Learning Platform</p>
+
+    <img
+        src="Logo.png"
+        class="site-logo"
+        alt="AD Foundation Logo"
+    >
+
+    <div class="header-content">
+
+        <h1>
+            AD Foundation Learning Platform
+        </h1>
+
+        <p>
+            Welcome to AD Foundation Learning Platform
+        </p>
+
+    </div>
+
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-<h2>Learn Today, Lead Tomorrow</h2>
-<p>Quality Education for Everyone</p>
-<a href="#classes" class="btn">Explore Classes</a>
-</section>
 
-<section class="section" id="classes">
-<h2>Our Classes</h2>
+    <h2>
+        Learn Today, Lead Tomorrow
+    </h2>
 
-<div class="cards">
+    <p>
+        Quality Education for Everyone
+    </p>
 
-<div class="card">
-<h3>English</h3>
-  <img src="English.png">
-<p>Improve Speaking, Reading & Writing Skills.</p>
-</div>
+    <a href="#classes" class="btn">
+        Explore Classes
+    </a>
 
-<div class="card">
-<h3>Mathematics</h3>
-  <img src="Maths.png">
-<p>Learn Basic to Advanced Mathematics.</p>
-</div>
+    <br>
 
-<div class="card">
-<h3>Computer</h3>
-  <img src="Computer.png">
-<p>Basic & Advanced Computer Courses.</p>
-</div>
+    <!-- WHATSAPP BUTTON -->
 
-<div class="card">
-<h3>Science</h3>
-    <img src="Science.png">
-<p>Easy and Practical Science Learning.</p>
-</div>
-
-<div class="card">
-<h3>Graphic Design</h3>
-    <img src="Graphic Design class.png">
-<p>Photoshop, Illustrator & Canva.</p>
-</div>
-
-<div class="card">
-<h3>AI Classes</h3>
-    <img src="AI class.png">
-<p>Artificial Intelligence & Future Skills.</p>
-</div>
-
-</div>
+    <a
+        href="https://wa.me/91XXXXXXXXXX?text=Hello%20AD%20Foundation%2C%20I%20want%20to%20know%20about%20your%20classes."
+        class="whatsapp-btn"
+        target="_blank"
+    >
+        💬 Message Us on WhatsApp
+    </a>
 
 </section>
+
+
+<!-- =========================
+     CLASSES
+========================= -->
+
+<section
+    class="section"
+    id="classes"
+>
+
+    <h2>
+        Our Classes
+    </h2>
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>English</h3>
+
+            <img
+                src="English.png"
+                alt="English Class"
+            >
+
+            <p>
+                Improve Speaking, Reading & Writing Skills.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Mathematics</h3>
+
+            <img
+                src="Maths.png"
+                alt="Mathematics Class"
+            >
+
+            <p>
+                Learn Basic to Advanced Mathematics.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Computer</h3>
+
+            <img
+                src="Computer.png"
+                alt="Computer Class"
+            >
+
+            <p>
+                Basic & Advanced Computer Courses.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Science</h3>
+
+            <img
+                src="Science.png"
+                alt="Science Class"
+            >
+
+            <p>
+                Easy and Practical Science Learning.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Graphic Design</h3>
+
+            <img
+                src="Graphic Design class.png"
+                alt="Graphic Design Class"
+            >
+
+            <p>
+                Photoshop, Illustrator & Canva.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>AI Classes</h3>
+
+            <img
+                src="AI class.png"
+                alt="AI Class"
+            >
+
+            <p>
+                Artificial Intelligence & Future Skills.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ADMISSION / CONTACT FORM
+========================= -->
+
+<section class="form-section" id="admission">
+
+    <h2>
+        Join AD Foundation
+    </h2>
+
+    <p class="form-description">
+        Fill the form below and send your details directly to WhatsApp.
+    </p>
+
+
+    <div class="form-box">
+
+        <form onsubmit="sendToWhatsApp(); return false;">
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- MOBILE -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Mobile Number *
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+            </div>
+
+
+            <!-- COURSE -->
+
+            <div class="form-group">
+
+                <label for="course">
+                    Select Course *
+                </label>
+
+                <select id="course" required>
+
+                    <option value="">
+                        Select a course
+                    </option>
+
+                    <option>
+                        English
+                    </option>
+
+                    <option>
+                        Mathematics
+                    </option>
+
+                    <option>
+                        Computer
+                    </option>
+
+                    <option>
+                        Science
+                    </option>
+
+                    <option>
+                        Graphic Design
+                    </option>
+
+                    <option>
+                        AI Classes
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TIME -->
+
+            <div class="form-group">
+
+                <label for="time">
+                    Preferred Class Time
+                </label>
+
+                <select id="time">
+
+                    <option value="">
+                        Select preferred time
+                    </option>
+
+                    <option>
+                        Morning
+                    </option>
+
+                    <option>
+                        Afternoon
+                    </option>
+
+                    <option>
+                        Evening
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Write your message here..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                💬 Send Details on WhatsApp
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact-section">
+
+    <h2>
+        Contact AD Foundation
+    </h2>
+
+    <p>
+        📍 Sector 92, Block A-17
+    </p>
+
+    <p>
+        📧 Shakshiadfoundation@gmail.com
+    </p>
+
+    <p>
+        📱 Contact us on WhatsApp
+    </p>
+
+    <a
+        href="https://wa.me/91XXXXXXXXXX"
+        class="whatsapp-btn"
+        target="_blank"
+    >
+        💬 WhatsApp Us
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-<h3>AD Foundation Learning Platform</h3>
-<p>Address: Sector 92, Block A-17</p>
-<p>All Classes Available</p>
+
+    <h3>
+        AD Foundation Learning Platform
+    </h3>
+
+    <p>
+        Address: Sector 92, Block A-17
+    </p>
+
+    <p>
+        All Classes Available
+    </p>
+
 </footer>
+
+
+<!-- =========================
+     WHATSAPP SCRIPT
+========================= -->
+
+<script>
+
+function sendToWhatsApp(){
+
+    /* =========================
+       IMPORTANT:
+       PUT YOUR WHATSAPP NUMBER HERE
+       ========================= */
+
+    var whatsappNumber = "91XXXXXXXXXX";
+
+
+    /* GET FORM DATA */
+
+    var name =
+        document.getElementById("name").value;
+
+    var phone =
+        document.getElementById("phone").value;
+
+    var email =
+        document.getElementById("email").value;
+
+    var course =
+        document.getElementById("course").value;
+
+    var time =
+        document.getElementById("time").value;
+
+    var message =
+        document.getElementById("message").value;
+
+
+    /* CREATE WHATSAPP MESSAGE */
+
+    var whatsappMessage =
+        "Hello AD Foundation,%0A%0A" +
+
+        "I want to join your classes.%0A%0A" +
+
+        "Name: " + name + "%0A" +
+
+        "Mobile: " + phone + "%0A" +
+
+        "Email: " + email + "%0A" +
+
+        "Course: " + course + "%0A" +
+
+        "Preferred Time: " + time + "%0A" +
+
+        "Message: " + message;
+
+
+    /* OPEN WHATSAPP */
+
+    var whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        whatsappMessage;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
 
 </body>
 </html>
